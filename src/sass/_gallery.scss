@@ -1,0 +1,66 @@
+.gallery {
+    padding-top: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.card-link {
+    width: 100%;
+    flex-basis: calc((100% - 60px) / 4);
+
+    box-shadow: 10px 10px 18px -12px rgb(115, 120, 175);
+    transition: transform 250ms linear;
+
+    &:hover,
+    &:focus {
+        transform: scale(1.05);
+    }
+
+}
+
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-evenly;
+}
+
+.photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+padding: 5px;
+
+width: 100%;
+
+font-size: 12px;
+
+background: radial-gradient(circle 610px at 5.2% 51.6%, rgba(245, 237, 251, 0.767) 0%, rgba(238, 238, 253, 0.699) 97.5%) no-repeat fixed;
+}
+
+
+.info-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: transparent;
+
+    color: #150eeb;
+    text-shadow: 1px 1px 1px #FFF;
+}

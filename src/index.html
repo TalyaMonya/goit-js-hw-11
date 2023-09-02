@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +8,34 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/header.html"></include>
+    <div class="preloader">
+      <span class="loader"></span>
+    </div>
+
+    <header class="header">
+      <div class="form-block">
+        <form class="search-form" id="search-form">
+          <input
+            class="form-input"
+            type="text"
+            name="searchQuery"
+            autocomplete="off"
+            placeholder="Search images..."
+          />
+
+          <button type="submit" class="searchButton">
+            <svg class="icon icon-search">
+              <use href="./images/sprite.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+    </header>
+    <div class="pre-loader"><span class="loader"></span></div>
+
+    <section class="photo-gallery container">
+      <div class="gallery"></div>
+      <div class="js-guard"></div>
+    </section>
   </body>
 </html>
