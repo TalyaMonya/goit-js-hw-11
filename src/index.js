@@ -27,7 +27,7 @@ const options = {
   rootMargin: '200px',
 };
 
-const observer = new IntersectionObserver(loadMorePhotos, options)
+const observer = new IntersectionObserver(loadMorePhotos, options);
 
 const pixabay = new PixabayAPI();
 
@@ -47,9 +47,17 @@ async function onSubmitClick(event) {
     if (!search_query) {
         clearPage();
         Notify.info('Enter data to search!', notifyInit);
-        refs.gallery.innerHTML = '';
         return;
     }
+
+     if (search_query === pixabay.query) {
+    Notify.warning(
+      `We already found images for "${search_query.toUpperCase()}.
+      Please, enter another phrase`,
+      notifyInit
+    );
+    return;
+  }
 
     pixabay.query = search_query;
     clearPage();
@@ -83,7 +91,6 @@ async function onSubmitClick(event) {
     clearPage();
   } finally {
         spinnerStop();
-        refs.input.value = '';
   } 
 };
 
