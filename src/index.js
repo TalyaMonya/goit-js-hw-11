@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
 
 const options = {
   root: null,
-  rootMargin: '100px',
+  rootMargin: '200px',
 };
 
 const observer = new IntersectionObserver(loadMorePhotos, options)
